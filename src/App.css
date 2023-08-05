@@ -6,8 +6,8 @@
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 100;
-  color: rgb(0, 0, 0);
-  
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .back{
@@ -67,10 +67,13 @@
   background-color: #5f5f5f;
 }
 
-.watch{
-  background-color: #000000;
+.watch::after{
+
+  content: "";
+  display: table;
+  clear: both;
 }
-.watch .left{
+.watchLeft{
   float: left;
 }
 .watch iframe{
@@ -79,13 +82,13 @@
 }
 
 .watch p{
-  color: #000000;
+  color: #ffffff;
   margin-left: 70px;
   margin-top: 20px;
   font-size: 24px;
 }
 
-.watch .right{
+.watchRight{
   float: right;
   margin-right: 50px;
 }
@@ -94,5 +97,40 @@
   border-radius: px;
   height: 35px;
   width: 70px;
+  cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 15%;
+  height: 1500px;
+  background-color: #5f5f5f;
+}
+
+.right {
+  float: right;
+  width: 75%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.genresText{
+  color: rgb(0, 0, 0);
+  padding-left: 50px;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: 500px;
   cursor: pointer;
 }

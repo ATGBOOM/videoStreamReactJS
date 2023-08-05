@@ -1,4 +1,4 @@
-import styles from "./App.css";
+
 import { useState } from "react";
 
 interface Props{

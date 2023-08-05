@@ -17,17 +17,16 @@ function VideoCard({ url, title, className, watch }: Props) {
     <>
       <div className={className}>
         <iframe
+          onClick={handleChange}
           className="video"
           width="560"
           height="315"
           src={url}
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          
         ></iframe>
-        <p className="videoTitle">{title}</p>
-        <button className="watchButton" onClick={handleChange}>
-          WATCH
-        </button>
+        <p onClick={handleChange} className="videoTitle">{title}</p>
+   
       </div>
     </>
   );

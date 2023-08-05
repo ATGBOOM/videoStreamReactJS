@@ -1,5 +1,5 @@
 import VideoCard from "./video_card";
-import videos from "../assets/videos";
+import {videos} from "../assets/videos";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function WatchingVideoPage() {
@@ -13,7 +13,7 @@ function WatchingVideoPage() {
   return (
     <>
       <div className="watch">
-        <div className="left">
+        <div className="watchLeft">
           <iframe
             className="video"
             width="1100"
@@ -22,10 +22,11 @@ function WatchingVideoPage() {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+
           />
           <p> {location.state.title} </p>
         </div>
-        <div className="right ">
+        <div className="watchRight ">
           {videos.map((items) => (
             <>
               <VideoCard
